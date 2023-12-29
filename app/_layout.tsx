@@ -1,5 +1,6 @@
 import { Stack, Link } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { PrimaryColor } from "./styles";
 
 export default function Layout() {
   return (
@@ -7,11 +8,12 @@ export default function Layout() {
       screenOptions={{
         headerTitle: "Home",
         headerStyle: {
-          backgroundColor: "#544881",
+          backgroundColor: PrimaryColor,
         },
         headerTintColor: "#fff",
+        headerBackTitleVisible: false,
         headerRight: () => (
-          <Link href={"/settings"}>
+          <Link href={"/settings"} asChild>
             <Ionicons name="ios-settings-outline" size={24} color="white" />
           </Link>
         ),
